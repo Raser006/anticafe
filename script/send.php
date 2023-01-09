@@ -43,5 +43,5 @@ fetch('send.php', {
         $("#send_form").addClass("send_fail");
         setTimeout(() => $("send_form").removeClass("send_fail "), 4000);
     }
-}
+})
 ?>
