@@ -1,7 +1,7 @@
 <?php
-$name = 'name' 
-$email = 'e-mail'
-$msg = 'komm'
+$name = $_POST['name'] 
+$email = $_POST['e-mail'] 
+$msg = $_POST['komm'] 
 
 $name = trim(urldecode(htmlspecialchars($name)));
 $email = trim(urldecode(htmlspecialchars($email)));
