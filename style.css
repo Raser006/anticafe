@@ -1,0 +1,776 @@
+* {
+    padding: 0;
+    margin: 0;   
+}
+
+ @font-face {
+    font-family: 'lemon';
+    src: url('fonts/19572.ttf');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+body {
+    background-image: url(pic/Group\ 47.png);
+}
+
+
+.preload {
+    background: #000000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.spinSquar {
+    position: absolute;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    animation-name: spinningSquares;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+#spinSquares {
+    position: relative;
+    width: 5%;
+    height: 28px;
+    margin: auto;
+    top: 50%;
+}
+
+#spinSquar_4 {
+    left: -84px;
+    animation-delay: 0s;
+}
+#spinSquar_3 {
+    left: -56px;
+    animation-delay: 0.15s;
+}
+#spinSquar_2 {
+    left: -28px;
+    animation-delay: 0.24s;
+}
+#spinSquar_1 {
+    left: 0px;
+    animation-delay: 0.33s;
+}
+#spinSquar_5 {
+    left: 28px;
+    animation-delay: 0.42s;
+}
+#spinSquar_6 {
+    left: 56px;
+    animation-delay: 0.51s;
+}
+#spinSquar_7 {
+    left: 84px;
+    animation-delay: 0.60s;
+}
+#spinSquar_8 {
+    left: 112px;
+    animation-delay: 0.69s;
+}
+
+@keyframes spinningSquares {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.3) rotate(90deg);
+    }
+}
+
+
+
+.content {
+    transition: 0.5s;
+    position: relative;
+    z-index: 0;
+  }
+.menu {
+    display: flex;
+    background: black;
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+}
+.pravo {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+.burger {
+    display: inline-block;
+    margin: auto 0px;
+    cursor: pointer;
+}
+.profile {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 146px;
+    margin-left: 73px;
+}
+.logo {
+    display: inline-block;
+    margin-top: 13px;
+    margin-bottom: 6px;
+    margin-left: 122px;
+}
+
+
+.padshi {
+    z-index: 98;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.96);
+    text-align: center;
+    display: flex;
+    transform: translateY(-100%);
+    transition: 0.4s;
+}
+.padshi_active {
+    display: inline;
+    transform: translate(0%);
+}
+.padshi li {
+    font-weight: 300;
+    margin: 0.2em 0;
+    font-size: 30px;
+    text-transform: none;
+    list-style-type: none;
+}
+.padshi>.kostal {
+    margin-top: 70px;
+}
+.padshi>li>a {
+    font-family: 'lemon';
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 1em;
+    border-radius: 0.25em;
+    transition: background 0.2s;
+    color: #fff;
+}
+.padshi>li>a:hover {
+    background-color: #FF7A00;
+    border-radius: 0.25em;
+}
+
+
+.ikonki {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.kvadrat {
+    display: inline-block;
+    margin: 20px 50px;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 130px;
+}
+.kvadrat>.ikon>img {
+    margin: 0px 40%;
+}
+.ikon {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.text>p {
+    font-family: 'lemon';
+    margin: 1% 2%;
+    font-size: 14px;
+}
+.orange {
+    font-family: 'lemon';
+    color: #FF7A00;
+}
+
+
+
+.vip {
+    z-index: 111;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 1500px;
+    align-items: center;
+    padding-top: 200px;
+    display: none;
+}
+.vip_active {
+    display: inline;
+}
+.zabron {
+    cursor: pointer;
+}
+.zona {
+    border-radius: 5px;
+    background: black;
+    width: 710px;
+    height: 540px;
+    margin: auto;
+    display: flex;
+}
+.zona>img {
+    margin: 7px;
+}
+.zona>.nadpisi>img {
+    margin-left: 285px;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.zona>.nadpisi>h2 {
+    text-align: center;
+    color: #FF7A00;
+    font-size: 36px;
+    font-family: 'lemon';
+    margin-top: 5px;
+}
+.zona>.nadpisi>p {
+    margin: 3px 20px ;
+}
+.zona>.nadpisi>.down{
+    margin-bottom: 35px;
+}
+.zona>.nadpisi>a {
+    color: white;
+    background-color: #FF7A00;
+    border-radius: 7px;
+    margin-left: 70px;
+    font-family: 'lemon';
+    padding: 7px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.zon {
+    z-index: 111;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 1500px;
+    align-items: center;
+    padding-top: 200px;
+    display: none;
+}
+.zon_active {
+    display: inline;
+}
+
+.vr {
+    z-index: 111;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 1500px;
+    align-items: center;
+    padding-top: 200px;
+    display: none;
+    opacity: 1;
+}
+.vr_active {
+    display: inline;
+}
+
+.kal {
+    z-index: 111;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 1500px;
+    align-items: center;
+    padding-top: 200px;
+    display: none;
+}
+.kal_active {
+    display: inline;
+}
+
+
+
+.kartochki {
+    width: 100%;
+    height: 475px;
+    text-align: center;
+}
+.kartochki>h2 {
+    font-size: 24px;
+    margin: 0px auto;
+    margin-top: 80px;
+    margin-bottom: 46px;
+    font-family: 'lemon';
+    color: #FF7A00;
+}
+.boxes {
+    width: 100%;
+    display: flex; 
+    flex-wrap: wrap;
+    height: 500px;
+}
+.box {
+    display: inline-block;
+    width: 266px;
+    height: 399px;
+    margin:0px auto;
+    background: url(pic/loft-game-bar-room-steel-artema-3-5c573024ce18f\ 1.png);
+}
+.box>p {
+    color: white;
+    font-size: 24px;
+    font-family: 'lemon';
+    margin: 0px auto;
+    margin-top: 155px;
+    margin-bottom: 109px;
+}
+.box>.button {
+    color: white;
+    background-color: #FF7A00;
+    border-radius: 20px;
+    margin: 0px auto;
+    font-family: 'lemon';
+    font-size: 12px;
+    padding: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.box1 {
+    width: 266px;
+    height: 399px;
+    margin:0px auto;
+    background: url(pic/Sony-PlayStation-5-PS5-0\ 1.png);
+}
+.box1>p {
+    color: white;
+    font-size: 24px;
+    font-family: 'lemon';
+    margin: 0px auto;
+    margin-top: 155px;
+    margin-bottom: 109px;
+}
+.box1>.button {
+    color: white;
+    background-color: #FF7A00;
+    border-radius: 20px;
+    margin: 0px auto;
+    font-family: 'lemon';
+    font-size: 12px;
+    padding: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.box2 {
+    width: 266px;
+    height: 399px;
+    margin:0px auto;
+    background: url(pic/original\ 1.png);
+}
+.box2>p {
+    color: white;
+    font-size: 24px;
+    font-family: 'lemon';
+    margin: 0px auto;
+    margin-top: 121px;
+    margin-bottom: 109px;
+}
+.box2>.button {
+    color: white;
+    background-color: #FF7A00;
+    border-radius: 20px;
+    margin: 0px auto;
+    font-family: 'lemon';
+    font-size: 12px;
+    padding: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.box3 {
+    width: 266px;
+    height: 399px;
+    margin:0px auto;
+    background: url(pic/eb52fa2cb4c01a4440bacb4eddf23e11\ 1.png);
+}
+.box3>p {
+    color: white;
+    font-size: 24px;
+    font-family: 'lemon';
+    margin: 0px auto;
+    margin-top: 155px;
+    margin-bottom: 109px;
+}
+.box3>.button {
+    color: white;
+    background-color: #FF7A00;
+    border-radius: 20px;
+    margin: 0px auto;
+    font-family: 'lemon';
+    font-size: 12px;
+    padding: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.aksii {
+    text-align: center;
+}
+.aksii>h2 {
+    font-size: 24px;
+    margin: 0px auto;
+    margin-top: 96px;
+    font-family: 'lemon';
+    color: #FF7A00;
+}
+.aksii>p {
+    font-size: 16px;
+    margin: 0px auto;
+    margin-top: 11px;
+    margin-bottom: 46px;
+    font-family: 'lemon';
+    color: black;
+}
+.block {
+    display:block;
+    align-items: center;
+}
+.beleberda {
+    margin: auto;
+    width: 954px;
+    background: black;
+    border-radius: 25px;
+    border: 2px solid #FF7A00;
+    display: flex;
+    margin-bottom: 34px;
+}
+.beleberda>.text {
+    display: inline;
+    justify-content: left;
+    margin: 0%;
+}
+.beleberda>.text>h2 {
+    color: #FF7A00;
+    font-size: 20px;
+    font-family: 'lemon';
+    text-align: left;
+    margin-left: 44px;
+    margin-top: 22px;
+    margin-bottom: 14px;
+}
+.beleberda>.text>p {
+    color: white;
+    font-size: 12px;
+    font-family: 'lemon';
+    text-align: left;
+    margin-left: 44px;
+    margin-bottom: 30px;
+}
+.beleberda>.text>a {
+    color: black;
+    font-size: 16px;
+    font-family: 'lemon';
+    text-align: center;
+    text-decoration: none;
+    background: #FF7A00;
+    border-radius: 20px;
+    padding: 14px 53px ; 
+}
+.two>.text>p {
+    margin-bottom: 45px;
+}
+.three>.text>p {
+    margin-bottom: 60px;
+}
+
+.kalian {
+    text-align: center;
+}
+.kalian>h2 {
+    font-size: 24px;
+    margin: 0px auto;
+    margin-top: 96px;
+    font-family: 'lemon';
+    color: #FF7A00;
+}
+.kalian>p {
+    font-size: 16px;
+    margin: 0px auto;
+    margin-top: 11px;
+    margin-bottom: 46px;
+    font-family: 'lemon';
+    color: black;
+}
+
+
+.rools {
+    text-align: center;
+}
+.rools>h2 {
+    font-size: 24px;
+    margin: 0px auto;
+    margin-top: 96px;
+    font-family: 'lemon';
+    color: #FF7A00;
+}
+.pravila {
+    background: url(pic/Group\ 48\ \(1\).png);
+    width: 1196px;
+    margin: 30px auto;
+    height: 514px;
+    font-family: 'lemon';
+}
+.pravila>h2 {
+    font-size: 24px;
+    padding-top: 36px ;
+    margin: 0px auto;
+    color: #FF7A00;
+}
+.pravila>p {
+    margin-top: 32px ;
+    margin-left: 121px;
+    margin-right: 151px;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+}
+ 
+
+.contacts {
+    text-align: center;
+}
+.contacts>h2 {
+    font-size: 24px;
+    margin: 0px auto;
+    margin-top: 96px;
+    font-family: 'lemon';
+    color: #FF7A00;
+}
+.bachira {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contact {
+    background: black;
+    width: 588px;
+    Height: 429px;
+    display: flex;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 2px solid #FF7A00 ;
+    text-align: left;
+}
+.kartinka>img {
+    border-radius: 5px;
+}
+.nadpisi>img {
+    margin-top: 25px;
+    margin-left: 52px;
+    text-align: left;
+}
+.nadpisi>p {
+    font-size: 14px;
+    font-family: 'lemon';
+    margin-left: 52px;
+    margin-right: 36px;
+    color: white;
+}
+.kostil>.ikon {
+    margin-right: 12px;
+}
+.kostil {
+    margin-top: 113px;
+    margin-left: 52px;
+}
+
+
+.podval {
+    margin-top: 300px;
+    background: black;
+    text-align: center;
+    align-items: center;
+    height: 500px;
+}
+.podval>.logotip {
+    margin-top: 13px;
+}
+.podvalchik {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 5%;
+}
+.podvalchik>.menushka {
+    color: white;
+    font-size: 12px;
+    font-family: 'lemon';
+    margin: 0 auto;
+}
+.menushka>a {
+    margin: 7,5px auto;
+    color: #fff;
+    text-decoration: none;
+} 
+.podvalchik>.adres {
+    color: white;
+    font-size: 12px;
+    font-family: 'lemon';
+    margin: 0 auto;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+}
+.adres>p {
+    text-align: left;
+    margin: 2.5px auto;
+} 
+.adres>.kostil {
+    margin-top: 35px;
+    margin-left: 0;
+    align-items: left;
+    justify-content: left;
+}
+
+
+
+
+
+
+.bron {
+    z-index: 122;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 1500px;
+    align-items: center;
+    padding-top: 200px;
+    display: none;
+}
+.geniy {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 245px;
+    color: #000000;
+    text-shadow: #FF7A00 1px 2px 4px;
+}
+.bron_active {
+    display: inline;
+}
+.bron>.zonax>form>.geniy>img {
+    height: 32px;
+    width: 32px;
+    margin-left: 200px;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.bron>.zonax>form>.genyi>h2{
+    text-align: center;
+    color: #FF7A00;
+    font-size: 36px;
+    font-family: 'lemon';
+    margin-top: 5px;
+}
+.zonax {
+    border-radius: 5px;
+    background: rgb(170, 170, 170);
+    width: 710px;
+    height: 440px;
+    margin: auto;
+}
+.row {
+    margin: auto 2%;
+    text-align: center;
+}
+.getintouch {
+    padding: 80px 0;
+}
+.textinput {
+    margin: 40px 0;
+}
+.textinpit p, .textmsg p {
+    font-weight: 700;
+    color: #696969;
+    margin-bottom: 5px;
+}
+.textinput p span, .textmsg p span{
+    color: #f6744b;
+    margin-left: 5px;
+}
+.textinput input {
+    border: 0;
+    border-bottom: 1px solid rgb(170, 170, 170);
+    width: 90%;
+    height: 40px;
+    outline: 0;
+}
+.textmsg textarea {
+    border: 0;
+    border-bottom: 1px solid rgb(170, 170, 170);
+    width: 95%;
+    height: 80px;
+    outline: 0;
+    padding-top: 10px;
+}
+.getintouch form {
+    width: 70%;
+    margin: auto;
+}
+.submit {
+    width: 205px;
+    height: 50px;
+    letter-spacing: 1px;
+    background: #FF7A00;
+    border: 1px solid #FF7A00;
+    color: #fff;
+    display: block;
+    margin: 50px auto 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+.submit:hover {
+    color: #FF7A00;
+    transition: 0.5s;
+    background: #000000;
+
+}
+
+.send_success {
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(1, 225, 1, 0.3);
+    border: 2px solid rgba(1, 225, 1, 0.3);
+}
+.send_fail {
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(255, 1, 1, 0.3);
+    border: 2px solid rgba(255, 1, 1, 0.3);
+}
